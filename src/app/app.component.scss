@@ -1,0 +1,55 @@
+.container {
+  background-color: #0bf0b2;
+  height: auto;
+  min-height: 100vh;
+  align-items: flex-start;
+
+  .wrapper {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    margin: 2rem;
+    border-radius: 10px;
+    background-color: rgba(34, 34, 34, 0.9);
+    color: #f4f4f4;
+    height: auto;
+    width: auto;
+
+    .top-wrapper {
+      width: 100%;
+      padding: 1rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-wrapper {
+      padding: 1rem;
+      margin-top: 1rem;
+      text-align: start;
+      width: 100%;
+
+      button {
+        gap: 0.5rem;
+        background-color: transparent;
+        font-size: 1rem;
+        border: none;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .add-btn {
+        color: #f4f4f4;
+
+        .add-icon {
+          color: #0bf0b2;
+        }
+      }
+
+      .hide-btn {
+        color: #e64646;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

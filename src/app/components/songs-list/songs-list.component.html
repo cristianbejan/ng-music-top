@@ -1,0 +1,7 @@
+<ul class="songs-list">
+  <app-song
+    *ngFor="let song of sortedSongsArr; let i = index"
+    [song]="song"
+    [index]="i"
+  ></app-song>
+</ul>

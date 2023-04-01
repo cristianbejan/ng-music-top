@@ -1,0 +1,19 @@
+<li *ngIf="song" class="item-list flex-center">
+  <span>{{ index! + 1 }}</span>
+  <fa-icon [icon]="faMusic" size="2x" class="music-icon"></fa-icon>
+  <div class="song-details">
+    <div>
+      <h3>{{ song.name }}</h3>
+      <h5>{{ song.artist }}</h5>
+    </div>
+    <div>
+      <p>Date added: {{ song.date }}</p>
+    </div>
+  </div>
+  <div class="vote flex-center">
+    <button type="button" class="btn">Vote</button>
+    <p>{{ song.votes }} votes</p>
+  </div>
+  <fa-icon [icon]="faPenToSquare" class="edit-icon" title="Edit"></fa-icon>
+  <fa-icon [icon]="faXmark" class="x-icon" title="Delete"></fa-icon>
+</li>
