@@ -5,6 +5,18 @@
     id="filter"
     placeholder="Search by song name or artist"
   />
-  <button id="filter-btn" class="btn" type="button">Search</button>
-  <button id="clear-filter" class="btn cancel-btn" type="button">Clear</button>
+  <div class="actions">
+    <app-button
+      id="filter-btn"
+      [btnClasses]="['btn']"
+      type="submit"
+      buttonText="Search"
+    ></app-button>
+    <app-button
+      id="clear-filter"
+      [btnClasses]="['btn', 'cancel-btn']"
+      type="button"
+      buttonText="Clear"
+    ></app-button>
+  </div>
 </div>

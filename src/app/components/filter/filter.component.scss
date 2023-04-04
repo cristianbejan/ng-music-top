@@ -10,15 +10,8 @@
     margin-right: 0.5rem;
   }
 
-  .btn {
-    width: 25%;
-  }
-  .cancel-btn {
-    background-color: #7c2424;
-    color: #f4f4f4;
-    margin-left: 0.5rem;
-    &:hover {
-      background-color: rgb(124, 36, 36, 0.8);
-    }
+  .actions {
+    display: flex;
+    gap: 0.5rem;
   }
 }

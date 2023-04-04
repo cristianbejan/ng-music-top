@@ -7,9 +7,10 @@ import { SongsListComponent } from './components/songs-list/songs-list.component
 import { SongComponent } from './components/song/song.component';
 import { FormComponent } from './components/form/form.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
-  declarations: [AppComponent, SongsListComponent, SongComponent, FormComponent, FilterComponent],
+  declarations: [AppComponent, SongsListComponent, SongComponent, FormComponent, FilterComponent, ButtonComponent],
   imports: [BrowserModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],

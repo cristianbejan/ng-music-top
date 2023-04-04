@@ -11,7 +11,11 @@
     </div>
   </div>
   <div class="vote flex-center">
-    <button type="button" class="btn">Vote</button>
+    <app-button
+      type="button"
+      [btnClasses]="['btn']"
+      buttonText="Vote"
+    ></app-button>
     <p>{{ song.votes }} votes</p>
   </div>
   <fa-icon [icon]="faPenToSquare" class="edit-icon" title="Edit"></fa-icon>
