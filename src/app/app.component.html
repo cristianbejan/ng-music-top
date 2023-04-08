@@ -3,7 +3,7 @@
     <h1>Music Top Songs</h1>
     <div class="top-wrapper">
       <app-filter></app-filter>
-      <app-songs-list [songs]="songs"></app-songs-list>
+      <app-songs-list [newSong]="newSongData"></app-songs-list>
     </div>
     <div class="form-wrapper">
       <button
@@ -22,7 +22,10 @@
         <fa-icon [icon]="faXmarkCircle" size="2x" class="hide-icon"></fa-icon>
         <span>Close form</span>
       </button>
-      <app-form *ngIf="showForm"></app-form>
+      <app-form
+        *ngIf="showForm"
+        (formInputData)="onFormSubmit($event)"
+      ></app-form>
     </div>
   </div>
 </section>

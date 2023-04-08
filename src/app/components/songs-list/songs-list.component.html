@@ -1,7 +1,9 @@
-<ul class="songs-list">
+<ul class="songs-list" #list>
   <app-song
-    *ngFor="let song of sortedSongsArr; let i = index"
+    *ngFor="let song of songs; let i = index"
     [song]="song"
     [index]="i"
+    (songVoted)="onSongVote($event)"
+    (songDeleted)="onDeleteSong($event)"
   ></app-song>
 </ul>

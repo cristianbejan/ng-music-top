@@ -15,9 +15,20 @@
       type="button"
       [btnClasses]="['btn']"
       buttonText="Vote"
+      (click)="onVote()"
     ></app-button>
     <p>{{ song.votes }} votes</p>
   </div>
-  <fa-icon [icon]="faPenToSquare" class="edit-icon" title="Edit"></fa-icon>
-  <fa-icon [icon]="faXmark" class="x-icon" title="Delete"></fa-icon>
+  <fa-icon
+    [icon]="faPenToSquare"
+    class="edit-icon"
+    title="Edit"
+    (click)="editSong(song)"
+  ></fa-icon>
+  <fa-icon
+    [icon]="faXmark"
+    class="x-icon"
+    title="Delete"
+    (click)="onDelete()"
+  ></fa-icon>
 </li>
