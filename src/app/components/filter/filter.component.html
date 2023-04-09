@@ -1,22 +1,32 @@
-<div class="filter flex-center">
-  <input
-    type="text"
-    name="filter"
-    id="filter"
-    placeholder="Search by song name or artist"
-  />
-  <div class="actions">
-    <app-button
-      id="filter-btn"
-      [btnClasses]="['btn']"
-      type="submit"
-      buttonText="Search"
-    ></app-button>
-    <app-button
-      id="clear-filter"
-      [btnClasses]="['btn', 'cancel-btn']"
-      type="button"
-      buttonText="Clear"
-    ></app-button>
-  </div>
-</div>
+<section class="filter flex-center">
+  <form
+    class="filter flex-center"
+    [formGroup]="filterForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <input
+      type="text"
+      name="filter"
+      id="filter"
+      placeholder="Search by song name or artist"
+      formControlName="filterValue"
+      (input)="onSearchInput($event)"
+    />
+    <div class="actions">
+      <app-button
+        id="filter-btn"
+        [btnClasses]="['btn']"
+        type="submit"
+        buttonText="Search"
+        [isDisabled]="!filterForm.valid"
+      ></app-button>
+    </div>
+  </form>
+  <app-button
+    id="clear-filter"
+    [btnClasses]="['btn', 'cancel-btn']"
+    type="button"
+    buttonText="Clear"
+    (click)="clearInput()"
+  ></app-button>
+</section>

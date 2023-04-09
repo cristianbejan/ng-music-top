@@ -7,16 +7,20 @@
     </div>
     <div class="form-wrapper">
       <button
-        *ngIf="showBtn"
+        *ngIf="!showForm"
         class="flex-center add-btn"
+        name="add-btn"
+        #addBtn
         (click)="onToggleForm()"
       >
         <fa-icon [icon]="faSquarePlus" size="2x" class="add-icon"></fa-icon>
         <span>Add new song</span>
       </button>
       <button
-        *ngIf="!showBtn"
+        *ngIf="showForm"
         class="flex-center hide-btn"
+        name="hide-btn"
+        #hideBtn
         (click)="onToggleForm()"
       >
         <fa-icon [icon]="faXmarkCircle" size="2x" class="hide-icon"></fa-icon>

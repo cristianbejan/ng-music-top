@@ -16,14 +16,12 @@ export class SongComponent {
   faMusic = faMusic;
   faXmark = faXmark;
   faPenToSquare = faPenToSquare;
-  songToBeEdited: Song = null;
 
   @Input() song!: Song;
   @Input() index!: number;
 
   @Output() songVoted: EventEmitter<Song> = new EventEmitter();
   @Output() songDeleted: EventEmitter<Song> = new EventEmitter();
-  // @Output() songToEdit: EventEmitter<Song> = new EventEmitter();
 
   constructor(private dataService: DataStoreService) {}
 
@@ -36,7 +34,6 @@ export class SongComponent {
   }
 
   editSong(song: Song): void {
-    this.songToBeEdited = song;
-    this.dataService.newSongToBeEdited(this.songToBeEdited);
+    this.dataService.newSongToBeEdited(song);
   }
 }

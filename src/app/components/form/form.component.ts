@@ -16,7 +16,6 @@ enum BTN_TEXT {
 export class FormComponent implements OnInit {
   btnText: string;
   songToBeEdited: Song = null;
-
   @Output() formInputData: EventEmitter<Song> = new EventEmitter();
 
   songForm = new FormGroup({
@@ -64,6 +63,8 @@ export class FormComponent implements OnInit {
     }
 
     this.formInputData.emit(songData);
+    this.dataService.newSongToBeEdited(null);
+    this.btnText = BTN_TEXT.ADD;
     this.songForm.reset();
   }
 }

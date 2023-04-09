@@ -21,8 +21,8 @@ export class SongService {
     return this.http.get<Song[]>(`${this.baseUrl}/songs`);
   }
 
-  getSong(id: number): Observable<Song> {
-    return this.http.get<Song>(`${this.baseUrl}/songs/${id}`);
+  searchSong(query: string): Observable<Song[]> {
+    return this.http.get<Song[]>(`${this.baseUrl}/songs?q=${query}`);
   }
 
   addNewSong(payload: Song): Observable<Song> {

@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
   faSquarePlus = faSquarePlus;
   faXmarkCircle = faXmarkCircle;
   showForm = false;
-  showBtn = true;
   newSongData!: Song;
 
   constructor(private dataService: DataStoreService) {}
@@ -24,19 +23,16 @@ export class AppComponent implements OnInit {
     this.dataService.selectedSongToBeEdited.subscribe((song) => {
       if (song) {
         this.showForm = true;
-        this.showBtn = false;
       }
     });
   }
 
   onToggleForm(): void {
     this.showForm = !this.showForm;
-    this.showBtn = !this.showBtn;
   }
 
   onFormSubmit(inputValue: Song): void {
     this.newSongData = inputValue;
-    this.showForm = true;
     this.onToggleForm();
   }
 }

@@ -1,4 +1,5 @@
 <ul class="songs-list" #list>
+  <p *ngIf="nothingFound">* No song found matching inserted data</p>
   <app-song
     *ngFor="let song of songs; let i = index"
     [song]="song"
