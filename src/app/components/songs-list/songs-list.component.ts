@@ -123,11 +123,11 @@ export class SongsListComponent implements OnInit, OnChanges, DoCheck {
         this.songs[key].artist.toLowerCase().includes(this.searchValue)
       ) {
         filteredSongs.push(this.songs[key]);
-      } else {
-        this.nothingFound = true;
       }
     }
-
     this.songs = filteredSongs;
+    if (filteredSongs.length == 0) {
+      this.nothingFound = true;
+    }
   }
 }

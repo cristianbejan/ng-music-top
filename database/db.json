@@ -10,7 +10,7 @@
     {
       "name": "Ne place",
       "artist": "ROA",
-      "votes": 3,
+      "votes": 7,
       "date": "14/03/2023, 22:54:09",
       "id": 1150936995302
     },
@@ -24,23 +24,37 @@
     {
       "name": "Fata mea",
       "artist": "Partizan",
-      "votes": 1,
+      "votes": 4,
       "date": "14/03/2023, 23:02:38",
       "id": 483061129960
     },
     {
       "name": "Folclor nemuritor",
       "artist": "Subcarpati",
-      "votes": 1,
+      "votes": 5,
       "date": "14/03/2023, 23:03:05",
       "id": 1575170037224
     },
     {
       "name": "Loose yourself",
       "artist": "Eminem",
-      "votes": 3,
+      "votes": 4,
       "date": "14/03/2023, 23:03:51",
       "id": 846686110500
+    },
+    {
+      "name": "Test",
+      "artist": "test1",
+      "votes": 3,
+      "date": "10/04/2023, 21:06:33",
+      "id": 910289553936
+    },
+    {
+      "name": "Alt test",
+      "artist": "test test",
+      "votes": 4,
+      "date": "10/04/2023, 21:06:56",
+      "id": 750363322302
     }
   ]
 }

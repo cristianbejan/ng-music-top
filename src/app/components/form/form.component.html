@@ -11,6 +11,12 @@
     placeholder="Song name"
     formControlName="song"
   />
+  <div
+    *ngIf="!songForm.get('song').valid && songForm.get('song').touched"
+    class="error"
+  >
+    *Please enter the song title
+  </div>
   <input
     type="text"
     name="artist"
@@ -18,6 +24,12 @@
     placeholder="Artist"
     formControlName="artist"
   />
+  <div
+    *ngIf="!songForm.get('artist').valid && songForm.get('artist').touched"
+    class="error"
+  >
+    *Please enter the artist or band name
+  </div>
   <app-button
     type="submit"
     [btnClasses]="['btn', 'add-btn']"

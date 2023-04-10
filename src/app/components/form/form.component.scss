@@ -6,4 +6,13 @@
     border: none;
     border-radius: 10px;
   }
+
+  .error {
+    color: #e64646;
+    margin: 0 0 0.5rem 1rem;
+  }
+
+  .ng-invalid.ng-touched {
+    border: solid 1px #e64646;
+  }
 }
